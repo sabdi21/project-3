@@ -24,15 +24,6 @@ class Profile extends React.Component {
         })
     }
 
-    // componentDidMount {
-    //     let user = this.props.user
-    //     user.ownedProperties.forEach(op => {
-    //         axios.get(`${SERVER_URL}/property/${op._id}`)
-    //         .then(foundProps => {
-                
-    //         })
-    //     })
-    // }
 
     handleSubmit = (e) => {
         e.preventDefault()
@@ -66,7 +57,6 @@ class Profile extends React.Component {
         if(!this.props.user) {
             return <Redirect to="/" />
         }
-
 
         if (this.props.user.ownedProperties){
             var ownedResults = this.props.user.ownedProperties.map((r,i) => {
@@ -104,15 +94,14 @@ class Profile extends React.Component {
                     <Button type="submit">Submit</Button>
                 </form>
                 <hr />
-                <h2>Bookings:</h2>
+                <h3>Bookings:</h3>
                     {bookedResults}
                 <hr />
+
                 <h2>Owned Properties:</h2>
-                {/* {ownedResults} */}
             </div>
         
         )
     }
 }
-
 export default Profile
