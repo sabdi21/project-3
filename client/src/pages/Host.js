@@ -79,6 +79,12 @@ class Host extends React.Component {
                 })
                 .then(response => {
                     console.log('success')
+                    //Store Token in localStorage (with an argument thats specific to your app)
+                    localStorage.setItem('mernToken', response.data.token)
+
+                    //Update App with user info
+                    this.props.updateUser()
+                    this.setState({redirect: true})
                 })
                 .catch(err => {
                     console.log(err)
@@ -113,7 +119,7 @@ class Host extends React.Component {
         return (
             <Container id="hostContainer">
           <Row>
-            <Card className="sign-up-form1" data-background-color="blue">
+            <Card className="sign-up-form2" data-background-color="blue">
                 <h2>Host a property </h2>
                 <form className="form1" onSubmit={this.handleSubmit}>
                 <CardBody>

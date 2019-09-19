@@ -23,12 +23,15 @@ class App extends React.Component {
 
   updateProfile = (e) => {
     e.preventDefault()
+    
+    this.getUser()
     console.log('Submitted')
 
   }
 
 
   getUser = () => {
+    console.log('in getUSER')
     //See if there is a token
     let token = localStorage.getItem('mernToken')
 

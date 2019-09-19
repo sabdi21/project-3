@@ -23,7 +23,7 @@ class IndexHeader extends React.Component {
               <h1 className="h1-seo">SEABNB</h1>
               <h3>Seattle Air-BNBetter</h3>
               {/* <SignUp /> */}
-              <Signup />
+              {/* <Signup /> */}
             
             </div>
             <h6 className="category category-absolute">

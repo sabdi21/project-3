@@ -29,8 +29,11 @@ class Results extends React.Component {
             this.setState({user: this.props.user._id})
         }
         let tempArr = [...this.props.result.dates_unavailable]
+        this.state.dates_unavailable.forEach(d => {
+            tempArr.push(d)
+        })
+
         console.log(tempArr, this.state.dates_unavailable)
-        tempArr.push(this.state.dates_unavailable)
         this.setState({dates_unavailable: tempArr})
         console.log(this.state.dates_unavailable)
     }
@@ -44,15 +47,16 @@ class Results extends React.Component {
         let sentObj = {
             bookedProperties: tempUserArr
         }
-        
+        console.log('Look its the state', this.state)
         axios.put(`http://localhost:3001/property/${this.props.result._id}`, this.state)
         .then((response) => {
             console.log('Form was submitted')
-            axios.put(`http://localhost:3001/auth/${this.state.user._id}`, sentObj, {
+            axios.put(`http://localhost:3001/auth/${this.props.user._id}`, sentObj, {
                 headers: { 'Authorization': `Bearer ${token}` }
             })
             .then(response => {
-                console.log('success')
+                console.log('success', response)
+                localStorage.setItem('mernToken', response.data.token)
                 this.props.updateUser()
             })
             .catch(err => {

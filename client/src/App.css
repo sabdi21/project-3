@@ -95,6 +95,13 @@ margin-top: -100px;
 .sign-up-form1 {
   border-radius: 3%;
   width: 300px;
+  margin-top: 200px;
+}
+
+.sign-up-form2 {
+  border-radius: 3%;
+  width: 300px;
+  /* margin-top: 200px; */
 }
 
 .form-control {
