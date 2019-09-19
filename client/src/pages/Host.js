@@ -119,7 +119,7 @@ class Host extends React.Component {
         return (
             <Container id="hostContainer">
           <Row>
-            <Card className="sign-up-form1" data-background-color="blue">
+            <Card className="sign-up-form2" data-background-color="blue">
                 <h2>Host a property </h2>
                 <form className="form1" onSubmit={this.handleSubmit}>
                 <CardBody>

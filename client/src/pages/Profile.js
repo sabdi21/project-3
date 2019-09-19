@@ -67,7 +67,6 @@ class Profile extends React.Component {
                 return <div></div>
             }
         }
-
         if(this.props.user.bookedProperties) {
             var bookedResults = this.props.user.bookedProperties.map((r,i) => {
                 return <PropertiesBooked key={i} results={r}  />
@@ -77,20 +76,19 @@ class Profile extends React.Component {
                 return <div></div>
             }
         }
-
         return (
             <div>
                 <h2>{this.props.user.firstname}'s Profile</h2>
                 <img src={this.props.user.profileUrl} />
                 <h3>Update Profile</h3>
                 <form onSubmit={this.handleSubmit}>
-                    <Input name="firstname" placeholder={this.props.user.firstname} value={this.state.firstname} onChange={this.handleChange} />
-                    <br />
-                    <Input name="lastname" placeholder={this.props.user.lastname} value={this.state.lastname} onChange={this.handleChange} />
+                    <Input className="updateProfile" name="firstname" placeholder={this.props.user.firstname} value={this.state.firstname} onChange={this.handleChange} />
+                    <br /> <br></br>
+                    <Input className="updateProfile" name="lastname" placeholder={this.props.user.lastname} value={this.state.lastname} onChange={this.handleChange} />
                     {/* <br /><br></br>
-                    <Input name="email"  /> */}
+                    <Input name="email"  /> */} <br></br>
                     <br />
-                    <Input name="profileUrl" placeholder={this.props.user.profileUrl} value={this.state.profileUrl} onChange={this.handleChange}/>
+                    <Input className="updateProfile" name="profileUrl" placeholder={this.props.user.profileUrl} value={this.state.profileUrl} onChange={this.handleChange}/>
                     <br />
                     {/* <input className="btn btn-primary" type="submit" /> */}
                     <Button type="submit">Submit</Button>
@@ -101,8 +99,6 @@ class Profile extends React.Component {
                 <hr />
 
                 <h2>Owned Properties:</h2>
-
-                    {ownedResults}
             </div>
         
         )
