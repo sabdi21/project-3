@@ -82,7 +82,7 @@ render () {
     return (
         <Card   className="rentResults" >
             <h3>
-                {this.props.result.address}
+              Address:  {this.props.result.address}
             </h3>
             <div className="minHeight">
             <SimpleImageSlider className="slider"
@@ -95,8 +95,8 @@ render () {
             />
             </div>
             {/* <img src={this.props.result.photos[0]} /> */}
-            <p>{this.props.result.city}, {this.props.result.state}</p>
-            <p>{this.props.result.maxNumberOfGuests}</p>
+            <p>City: {this.props.result.city}, {this.props.result.state}</p>
+            <p>Guests Allowed: {this.props.result.maxNumberOfGuests}</p>
                             <form onSubmit={this.handleSubmit}>
                 <input type="submit" value="Book it!" />
                 </form>

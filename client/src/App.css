@@ -77,11 +77,14 @@ margin-top: -100px;
 .page-header {
   /* padding-top: 20%; */
   width: 100%;
+  min-height: 1000px;
+  /* min-height: 1000px; */
   /* min-height: 100%; */
   /* margin-top: -50px; */
   /* z-index: -3; */
  }
 
+ 
 
 .form1 {
   width: 300px;
@@ -96,10 +99,12 @@ margin-top: -100px;
 
 .form-control {
   width: 200px;
+  /* height: 50px; */
 }
 
 .n-logo{
   padding-top: 150%;
+  
 }
 
 .form-group {
@@ -203,4 +208,11 @@ img {
 .minHeight{
   margin-left: 100px;
 }
+
+.updateProfile{
+  height:25px;
+  background-color: white;
+  font-size: 10pt;
+}
+
 
