@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from "moment";
 import { Input, Button, CustomInput, Form, FormGroup } from 'reactstrap';
-import Rental from './Rental';
 import DatePicker from "react-datepicker";
 import axios from 'axios'
 import SERVER_URL from '../constants'

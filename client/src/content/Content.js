@@ -9,7 +9,7 @@ import Signup from '../pages/Signup'
 import Rent from '../form/Rent'
 
 import Host from '../pages/Host'
-import Search from '../pages/Search'
+
 
 
 const Content = props => {
@@ -22,7 +22,7 @@ const Content = props => {
             <Route exact path="/host" render={
                () => <Host user={props.user} updateUser={props.updateUser} /> 
             } />
-            <Route exact path="/search" component={Search} />
+            {/* <Route exact path="/search" component={Search} /> */}
             <Route exact path="/profile" render={
                () => <Profile updateProfile={props.updateProfile} user={props.user} updateUser={props.updateUser}/> 
             } />

@@ -3,10 +3,6 @@ import SimpleImageSlider from "react-simple-image-slider";
 import { Button, CustomInput, Form, FormGroup, Label, Input, Card} from 'reactstrap';
 import axios from 'axios';
 
-
-
-
-// const Results = props => {
 class Results extends React.Component {
 
     constructor(props) {
@@ -44,14 +40,15 @@ class Results extends React.Component {
 
         let tempUserArr = [...this.props.user.bookedProperties]
         tempUserArr.push(this.props.result._id)
+        console.log('temp array', tempUserArr)
         let sentObj = {
             bookedProperties: tempUserArr
         }
         console.log('Look its the state', this.state)
         axios.put(`http://localhost:3001/property/${this.props.result._id}`, this.state)
         .then((response) => {
-            console.log('Form was submitted')
-            axios.put(`http://localhost:3001/auth/${this.props.user._id}`, sentObj, {
+            console.log('Form was submitted', response)
+            axios.put(`http://localhost:3001/auth/${this.props.user._id}`, sentObj, this.state, {
                 headers: { 'Authorization': `Bearer ${token}` }
             })
             .then(response => {
@@ -68,13 +65,6 @@ class Results extends React.Component {
         })
     }
 
-//     handleSubmit = e => {
-//         e.preventDefault()
-//         Axios.put(`http://localhost:3001/property/${props.result._id}`, this.state,)
-//     }
-
-       
-    
 render () {
     let photosArr = this.props.result.photos.map((photoUrl, index) => {
         return {url: photoUrl}
@@ -92,11 +82,7 @@ render () {
             <SimpleImageSlider className="slider"
                     width={500}
                     height={400}
-                    images= {photosArr}
-            // {this.props.result.photos.map((photoUrl, index) => {
-            //     return {url: photoUrl}
-            //                })}
-            />
+                    images= {photosArr} />
             </div>
             {/* <img src={this.props.result.photos[0]} /> */}
             <p>{this.props.result.city}, {this.props.result.state}</p>
