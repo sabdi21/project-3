@@ -21,8 +21,8 @@ Run heroku local
 Navigate to localhost:3000 in browser
 
 ### Links
-Deployed Link: (https://proj3-shukri.herokuapp.com/)
-GitHub: (https://github.com/sabdi21/project-3)
+- Deployed Link: (https://proj3-shukri.herokuapp.com/)
+- GitHub: (https://github.com/sabdi21/project-3)
 
 ##UI-Kits
 The UI Kit used for this project is the Now-UI-Kit created by creative Tim.  We used his styling sheets as our base and then created our own App.css file to modify the styling to adapt it to our project environment.
