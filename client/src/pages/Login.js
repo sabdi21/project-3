@@ -44,7 +44,7 @@ class Login extends React.Component {
             
           <div className="container" >
             <div className="page-header clear-filter" >
-                <h1 className="Rental-Form">Login Content</h1>
+                <h1 className="Rental-Form Login">Login Content</h1>
                 <span className="red">{this.state.message}</span>
                 {/* <form onSubmit={this.handleSubmit}>
                     <div>
