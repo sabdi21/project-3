@@ -77,7 +77,7 @@ class Profile extends React.Component {
             }
         }
         return (
-            <div>
+            <div className="profilePage">
                 <h2>{this.props.user.firstname}'s Profile</h2>
                 <img src={this.props.user.profileUrl} />
                 <h3>Update Profile</h3>
@@ -97,7 +97,6 @@ class Profile extends React.Component {
                 <h3>Bookings:</h3>
                     {bookedResults}
                 <hr />
-
                 <h2>Owned Properties:</h2>
             </div>
         

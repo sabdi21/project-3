@@ -126,44 +126,44 @@ class Host extends React.Component {
                     <div>
                         {/* <label>First Name:</label> */}
                         <InputGroup>
-                        <Input name="address" placeholder="Your address" onChange={this.storeInput}/>
+                        <Input className="hostInput" name="address" placeholder="Your address" onChange={this.storeInput}/>
                         </InputGroup>
                     </div>
                     <div>
                         {/* <label>Last Name:</label> */}
                         <InputGroup>
-                        <Input name="city" value="Seattle"  onChange={this.storeInput}/>
+                        <Input className="hostInput" name="city" value="Seattle"  onChange={this.storeInput}/>
                         </InputGroup>
                     </div>
                     <div>
                         {/* <label>Email:</label> */}
                         <InputGroup>
-                        <Input name="State"  value="Washington" onChange={this.storeInput}/>
+                        <Input className="hostInput" name="State"  value="Washington" onChange={this.storeInput}/>
                         </InputGroup>
                     </div>
                     <div>
                         {/* <label>Password:</label> */}
                         <InputGroup>
-                        <Input name="neighborhood" placeholder="Your neighborhood" onChange={this.storeInput}/>
+                        <Input className="hostInput" name="neighborhood" placeholder="Your neighborhood" onChange={this.storeInput}/>
                         </InputGroup>
                     </div>
                     <div>
                         {/* <label>Password:</label> */}
                         <InputGroup>
-                        <Input name="maxNumberOfGuests" placeholder="Maximum Number of Guests" onChange={this.storeInput}/>
+                        <Input className="hostInput" name="maxNumberOfGuests" placeholder="Maximum Number of Guests" onChange={this.storeInput}/>
                         </InputGroup>
                     </div>
                     <div>
                         {/* <label>Password:</label> */}
                         <InputGroup>
-                        <Input name="description" placeholder="Description" onChange={this.storeInput}/>
+                        <Input className="hostInput" name="description" placeholder="Description" onChange={this.storeInput}/>
                         </InputGroup>
                         <hr></hr>
                     </div>
                     <div>
                         {/* <label>Profile Image:</label> */}
                         <InputGroup>
-                        <Input name="photo" typ="url" placeholder="Your proptery photo" onChange={this.storeInput} value={this.state.photo}/>
+                        <Input className="hostInput" name="photo" typ="url" placeholder="Your proptery photo" onChange={this.storeInput} value={this.state.photo}/>
                         </InputGroup>
                     </div>
                     <br></br> 
