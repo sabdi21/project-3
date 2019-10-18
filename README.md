@@ -1,5 +1,5 @@
 # Seattle AirBnBetter
-Unit 3 - Group project 
+SEA-ABNB is a rental app that allows users to reserve a home or register a hope for short term reseravations by others.  
 Collaborators: Shukri Abdi, Paul D'Angelo, Enzo Staton
 
 ## Technologies used
