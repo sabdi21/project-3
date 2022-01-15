@@ -18,7 +18,7 @@
     "express-jwt": "^5.3.1",
     "init": "^0.1.2",
     "jsonwebtoken": "^8.5.1",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "moment": "^2.24.0",
     "mongoose": "^5.7.1",
     "morgan": "^1.9.1",
